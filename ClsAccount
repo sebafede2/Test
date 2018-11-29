@@ -1,0 +1,41 @@
+class Account{
+  private string mName1;
+  private const int mlName1 = 50;
+  private string mName2;
+  private const int mlName2 = 50;
+  private string mLastName1;
+  private const int mlLastName1 = 50;
+  private string mLastName2;
+  private const int mlLastName2 = 50;
+  private string mEmail;
+  private const int mlEmail = 254;
+  private string mPassword;
+  private const int mlPassword = 128;
+  private int mPhoneNumber;
+  private const int mlPhoneNumber = 999999999999999;
+  private string mCountry;
+  private const int mlCountry = 55;
+  private string mState;
+  private const int mlState = 50;
+  private string mTown;
+  private const int mlTown = 60;
+  private string mStreet;
+  private const int mlStreet = 100;
+  private string mStreetNumber;
+  private const int mlStreetNumber = 10;
+  private string mDepartment;
+  private const int mlDepartment = 10;
+
+  public string Name1{
+    get{return mName1;}
+    set{
+      if (value < 0 || value > mlName1){
+        throw new ArgumentOutOfRangeException($"{nameOf(value)} must be between 0 and {mlName1}")  
+      }
+      else{
+        mName1 = value
+      }
+    }
+  }
+  
+}
